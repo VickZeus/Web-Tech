@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="VITstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row_flex"
+            style="justify-content:space-between;width:100%;padding:1px;align-items:center; border:2px solid white;">
+            <p class="title">VITOPIA</p>
+            <div class="row_flex options" style="align-items:center;margin-right:5px">
+                <button onClick="genPass()">GENERATE PASS</button>
+                <button onClick="showGallery()">Pictures</button>
+                <button>Event List</button>
+                <button onClick="bookTicket()" id="ticketButton">Book Ticket</button>
+            </div>
+        </div>
+
+        <div id="PassHTML"></div>
+        <div id="PictureGallery"></div>
+
+        <img src="PosterImage.png" alt="Poster Image" class="PosterImage">
+        <div class="row_flex info_box">
+            <div class="column_flex">
+                <p class="title" style="margin:0px;">WHAT IS VITOPIA ?</p>
+                <p>VITOPIA is the grand cultural celebration of VIT-AP University, bringing together creativity, talent,
+                    and energy in an unforgettable three-day extravaganza.
+                    Designed to showcase the vibrant spirit of campus life, VITOPIA offers a dynamic platform where art,
+                    culture, and passion take center stage.
+                    From mesmerizing dance performances and soulful musical acts to high-fashion showcases and
+                    adrenaline-filled DJ nights, VITOPIA promises an immersive experience for everyone. <br><br> With a
+                    blend of tradition and contemporary expression, the festival creates an atmosphere of excitement,
+                    unity, and
+                    celebration—making it one of the most anticipated events of the year.</p>
+            </div>
+            <img src="PosterImage.png" alt="Poster Image" height="200" width="200"
+                style="padding:5px;border-radius:10px;">
+        </div>
+
+        <table cellspacing="0" cellpadding="8">
+            <div style="text-align:center;font-family:Arial, Helvetica, sans-serif;font-size:42px;">Our Top Events</div>
+            <tr>
+                <th>Event Name</th>
+                <th>Venue</th>
+                <th>Prize Pool</th>
+            </tr>
+            <tr>
+                <td>Fashion Show</td>
+                <td>RockPlaza</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>HeatTheBeat</td>
+                <td>AB1</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>DJBattle</td>
+                <td>AB2</td>
+                <td>5000</td>
+            </tr>
+
+            <tr>
+                <td>DanceItOut</td>
+                <td>Flag Pole</td>
+                <td>3000</td>
+            </tr>
+
+            <tr>
+                <td>Drone Show</td>
+                <td>AB2</td>
+                <td>4000</td>
+            </tr>
+        </table>
+
+        <svg width="120" height="100" class="animateSVG">
+            <rect x="100" y="20" width="10" height="40" fill="white" />
+        </svg>
+
+        <div class="row_flex info_box" style="align-items:center;padding:10px;">
+            <div class="column_flex">
+                <p class="title">Glimpse of VITOPIA 2024</p>
+                <p>Check out the glimpse of the VITOPIA 2024 event held at VIT-AP University, showcasing the vibrant atmosphere, exciting activities,
+                    and memorable moments that made the event a grand success.
+                </p>
+            </div>
+            <video width="320" height="240" controls>
+                <source src="VITOPIA24.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="column_flex info_box" style="align-items:center; padding:10px;">
+            <p class="title">How Far Are You From Venue ?</p>
+            <p id="locP" style="font-family:Arial, Helvetica, sans-serif;font-size:18px;">Click On the Below Button To know your distance from venue.</p>
+            <button onclick="getLocation()">Click Here</button>
+        </div>
+
+        <canvas id="myCanvas" width="100" height="30" style="border:1px solid #f5f5e5;"></canvas> 
+        
+        <script> 
+            var c = document.getElementById("myCanvas"); 
+            var ctx = c.getContext("2d"); 
+            ctx.fillStyle = "orange"; 
+            ctx.font = "12px Rockwell"; 
+            ctx.fillText("JOIN US NOW !!",10,20);  
+        </script> 
+
+        <footer  class="column_flex" style="background-color:white;width:100%;color:black;text-align:center;">
+            <p>© 2024 VITOPIA. All rights reserved.
+               <br>Contact <b>+91 7985415815</b> for any queries 
+               <br>
+               <b>Developed by Abhishek 🌟</b>
+            </p>
+        </footer>
+
+
+
+    </div>
+    <script src="funtionality.js"></script>
+</body>
+
+</html>
